@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<p>
+	<ul>
+		<li ng-repeat="name in names">
+			{{ name.name }}
+		</li>
+	</ul>
+	
+	</p>
+	
+	<script src="namesController.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<body ng-app="myApp">
+	<parent></parent>
+
+	<script>
+		var app = angular.module("myApp", []);
+		app.directive("parent",function(){
+			return {
+				restrict: 'EA',
+				template: "<div>Parent is {{ name }}</div><child></child>",
+				link: {
+					pre: function(scope, ele, attr){
+						scope.name = "DAD";
+					}
+				}
+			};
+		});
+		app.directive("child",function(){
+			return {
+				restrict: 'EA',
+				template: "<div>{{ childSays}}</div>",
+				link : {
+					post: function(scope, ele, attr){
+						scope.childSays = "Child says: My dad is"+ scope.name;
+
+					}
+				}
+			};
+
+
+		});
+	</script>
+
+</body>
+</html>
+
