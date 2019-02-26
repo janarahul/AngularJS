@@ -1,7 +1,7 @@
 var app = angular.module("myApp",[])
 app.controller("myCtrl", function($scope){
 	$scope.names = [
-	{product: "Item1",	price: 10000.0, qty: 1, url: "moto.jpeg"},
+	{product: "Item1", price: 10000.0, qty: 1, url: "moto.jpeg"},
 	{product: "Item2", price: 25000, qty: 1, url:"laptop.jpeg"},
 	{product: "Item3", price: 50, qty: 1, url:"moto.jpeg"}
 	];

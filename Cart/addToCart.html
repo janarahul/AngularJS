@@ -15,6 +15,7 @@
 		<li class="item-in-cart">
 			<label for="total">Total: </label>
 			<textfield id="total">{{ total | currency: "\u20B9 "}}</textfield>
+			<input type="button" class="button" style="" value="Buy Now" ng-click="addToCart(name)"/>
 		</li>
 	</ul>
 
@@ -26,7 +27,7 @@
 	</ul>
 	
 	
-	<script src="namesController.js"></script>
+	<script src="itemsController.js"></script>
 	
 </body>
 <script>
